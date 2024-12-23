@@ -1,0 +1,35 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title text-center">New Todo</h5>
+      <form action="/todos" method="POST">
+        <div class="mb-3">
+          <label for="todoInput" class="form-label">Todo Item</label>
+          <div class="input-group">
+            <div class="input-group-text">
+              <input
+                class="form-check-input mt-0"
+                type="checkbox"
+                name="todo[completed]"
+                value="true"
+                aria-label="Checkbox for following text input"
+              />
+            </div>
+            <input
+              type="text"
+              name="todo[name]"
+              class="form-control"
+              id="todoInput"
+              aria-label="Text input with checkbox"
+            />
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit"  class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
